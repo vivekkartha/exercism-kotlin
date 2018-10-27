@@ -1,5 +1,3 @@
-class Pangram {
-    companion object{
-        fun isPangram(s : String) = ('a'..'z').all{ s.toLowerCase().contains(it) } 
-    }
+object Pangram {
+    fun isPangram(s : String) = ('a'..'z').all{ s.toLowerCase().contains(it) }
 }
