@@ -1,3 +1,2 @@
-fun hello(): String {
-   return "Hello, World!"
-}
+fun hello() =  "Hello, World!"
+
