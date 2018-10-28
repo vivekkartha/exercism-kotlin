@@ -15,7 +15,6 @@ class HammingTest {
         assertEquals(0, Hamming.compute("", ""))
     }
 
-   
     @Test
     fun noDistanceBetweenShortIdenticalStrands() {
         assertEquals(0, Hamming.compute("A", "A"))
@@ -44,14 +43,12 @@ class HammingTest {
     fun smallDistanceInSmallStrand() {
         assertEquals(1, Hamming.compute("AT", "CT"))
     }
-
    
     @Test
     fun smallDistanceInMediumStrand() {
         assertEquals(1, Hamming.compute("GGACG", "GGTCG"))
     }
 
-   
     @Test
     fun smallDistanceInLongStrand() {
         assertEquals(2, Hamming.compute("ACCAGGG", "ACTATGG"))
@@ -62,31 +59,26 @@ class HammingTest {
     fun nonUniqueCharacterInFirstStrand() {
         assertEquals(1, Hamming.compute("AAG", "AAA"))
     }
-
    
     @Test
     fun nonUniqueCharacterInSecondStrand() {
         assertEquals(1, Hamming.compute("AAA", "AAG"))
     }
-
    
     @Test
     fun sameNucleotidesInDifferentPositions() {
         assertEquals(2, Hamming.compute("TAG", "GAT"))
     }
-
    
     @Test
     fun largeDistanceInPermutedStrand() {
         assertEquals(4, Hamming.compute("GATACA", "GCATAA"))
     }
 
-   
     @Test
     fun largeDistanceInOffByOneStrand() {
         assertEquals(9, Hamming.compute("GGACGGATTCTG", "AGGACGGATTCT"))
     }
-
    
     @Test
     fun validatesFirstStrandNotLonger() {
@@ -95,7 +87,6 @@ class HammingTest {
 
         Hamming.compute("AATG", "AAA")
     }
-
    
     @Test
     fun validatesSecondStrandNotLonger() {
@@ -104,5 +95,4 @@ class HammingTest {
 
         Hamming.compute("ATA", "AGTG")
     }
-
 }
